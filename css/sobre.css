@@ -51,26 +51,20 @@ body {
     margin-right: 15px;
 }
 
-.linkedin{
-    margin-top: 5%;
-}
 
 .about{
     color: #b1b1cd;
     margin-top: 5%;
 }
 
-.gmail{
-    margin-top: 2%;
-}
-
 .readme{
+    position: fixed-buttom;
     color: #b1b1cd;
     margin-top: 3%;
 }
 
 .stats{
-    position: relative;
+    position: fixed-buttom;
     color: #b1b1cd;
     margin-top: 6%;
 }

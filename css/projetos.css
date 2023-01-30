@@ -57,57 +57,146 @@ body {
     margin-left: 9%;
 }
 
-.metrics{
+:root {
+    --width: 5px;
+    --border-radius: calc(var(--width) * 2);
+    --button-width: 30px;
+    --button-left-pos: -12.5px;
+}
+
+.row {
+    margin: 0 20px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.pokedex, .solidity, .hardhat, .jupyter {
+    color: #b1b1cd;
+    position: relative;
+    
+}
+.pokedex::before, .pokedex::after, .solidity::before, .solidity::after, .hardhat::before, .hardhat::after, .jupyter::before, .jupyter::after {
+    position: absolute;
+    top: var(--button-width);
+    left: var(--button-left-pos);
+    content: "";
+    height: 30px;
+    width: 30px;
+    background: black;
+    border-radius: 100px;
+}
+.pokedex::after, .solidity::after, .hardhat::after, .jupyter::after {
+    width: calc( var(--button-width) / 2 );
+    height: calc( var(--button-width) / 2 );
+    background: red;
+    top: calc(var(--button-width) + var(--button-width) / 4 );
+    left: -5px;
+}
+
+.solidity::before, .solidity::after {
+    right: var(--button-left-pos);
+    left: initial;
+}
+.solidity::after {
+    right: -5px;
+}
+
+.pokedex::after {
+    width: calc( var(--button-width) / 2 );
+    height: calc( var(--button-width) / 2 );
+    background: red;
+    top: calc(var(--button-width) + var(--button-width) / 4 );
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left right";
+    position: relative;
+}
+.row:last-child {
+    grid-template-areas: "border ..." "full full";
+}
+.row .left, .row .right {
+    padding: var(--button-width);
+}
+
+.pokedex .left {
+    padding-top: 0;
+    border-left: var(--width) solid;
+    border-bottom: var(--width) solid;
+    border-bottom-left-radius: var(--width);
+}
+
+.solidity {
+    top: calc(var(--width) * -1);
+}
+.solidity .right {
+    border-right: var(--width) solid;
+    border-top: var(--width) solid;
+    border-top-right-radius: var(--width);
+    border-bottom-right-radius: var(--width);
+    border-bottom: var(--width) solid;
+}
+
+.hardhat {
+    top: calc(var(--width) * -2);
+}
+.hardhat .left {
+    border-left: var(--width) solid;
+    border-top: var(--width) solid;
+    border-top-left-radius: var(--width);
+    border-bottom-left-radius: var(--width);
+}
+
+.jupyter {
+    top: calc(var(--width) * -3);
+}
+.jupyter::before, .jupyter::after {
+    top: 85px;
+}
+.jupyter::before {
+    left: calc(50% - 17.5px);
+}
+.jupyter::after {
+    top: 92.5px;
+    left: calc(50% - 10.5px);
+}
+.jupyter .border {
+    height: 200px;
     display: block;
-    position: fixed-right;
-    overflow-y: hidden;
-    float: right;
+    border-right: var(--width) solid;
+    border-top-right-radius: var(--width);
+    position: relative;
+}
+.jupyter .border::before {
+    content: "";
+    position: absolute;
+    height: var(--width);
+    background: #b1b1cd;
+    top: 0;
+    width: calc(100% + var(--width));
+    transform: rotate(180deg);
+    border-bottom-left-radius: var(--width);
+    border-top-right-radius: var(--width);
 }
 
-.pokedex{
-    margin-top: 5px;
-    margin-left: 5%;
-    text-align: center;
-    width: 192px;
-    height: 192px;
-    border-radius: 50px;
-    background: #1f1f47;
-    box-shadow: inset -6px -6px 0px #191939,
-            inset 6px 6px 0px #252555;
+.border {
+    grid-area: border;
 }
 
-.solidity{
-    margin-top: 15px;
-    margin-left: 20%;
-    text-align: center;
-    width: 192px;
-    height: 192px;
-    border-radius: 50px;
-    background: #1f1f47;
-    box-shadow: inset -6px -6px 0px #191939,
-            inset 6px 6px 0px #252555;
+.full-width {
+    grid-area: full;
+    justify-self: center;
 }
 
-.hardhat{
-    margin-top: 15px;
-    margin-left: 5%;
-    text-align: center;
-    width: 192px;
-    height: 192px;
-    border-radius: 50px;
-    background: #1f1f47;
-    box-shadow: inset -6px -6px 0px #191939,
-            inset 6px 6px 0px #252555;
+.left {
+    grid-area: left;
 }
 
-.jupyter{
-    margin-top: 15px;
-    margin-left: 30%;
-    text-align: center;
-    width: 192px;
-    height: 192px;
-    border-radius: 50px;
-    background: #1f1f47;
-    box-shadow: inset -6px -6px 0px #191939,
-            inset 6px 6px 0px #252555;
+.right {
+    grid-area: right;
 }
