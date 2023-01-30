@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    background: rgb(21, 0, 67);
+    background: linear-gradient(50deg, rgba(21, 0, 67, 1) 47%, rgba(0, 17, 89, 1) 100%);
+}
+
+.master{
+    display: block;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.logo {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.menu {
+    padding-top: 30px;
+    width: 50%;
+    text-align: right;
+}
+
+.menu a {
+    color: #b1b1cd;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.hello {
+    color: #b1b1cd;
+    margin-top: 5%;
+    margin-left: 9%;
+}
+
+.metrics{
+    display: block;
+    position: fixed-right;
+    overflow-y: hidden;
+    float: right;
+}
+
+.pokedex{
+    margin-top: 5px;
+    margin-left: 5%;
+    text-align: center;
+    width: 192px;
+    height: 192px;
+    border-radius: 50px;
+    background: #1f1f47;
+    box-shadow: inset -6px -6px 0px #191939,
+            inset 6px 6px 0px #252555;
+}
+
+.solidity{
+    margin-top: 15px;
+    margin-left: 20%;
+    text-align: center;
+    width: 192px;
+    height: 192px;
+    border-radius: 50px;
+    background: #1f1f47;
+    box-shadow: inset -6px -6px 0px #191939,
+            inset 6px 6px 0px #252555;
+}
+
+.hardhat{
+    margin-top: 15px;
+    margin-left: 5%;
+    text-align: center;
+    width: 192px;
+    height: 192px;
+    border-radius: 50px;
+    background: #1f1f47;
+    box-shadow: inset -6px -6px 0px #191939,
+            inset 6px 6px 0px #252555;
+}
+
+.jupyter{
+    margin-top: 15px;
+    margin-left: 30%;
+    text-align: center;
+    width: 192px;
+    height: 192px;
+    border-radius: 50px;
+    background: #1f1f47;
+    box-shadow: inset -6px -6px 0px #191939,
+            inset 6px 6px 0px #252555;
+}
