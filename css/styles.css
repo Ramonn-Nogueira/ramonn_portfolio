@@ -60,7 +60,7 @@ section.sobre{
 }
 
 .extras{
-    position: relative;
+    position: absolute;
     bottom:-200px;
     right:-200px;
     width: 700px;
